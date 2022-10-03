@@ -25,6 +25,15 @@ $attributesData = json_decode($json, true);
 
         return $attributes;
     }
+     
+/**
+ * @dataProvider audienceTestAttributesProvider
+ * @param array<mixed> $audience_json
+ * @param array<mixed> $test_cases
+ */
+ // Insert Test here using the above params. These are created with the provider above
+}
+
 ```
 NodeJS:
 
@@ -33,22 +42,7 @@ describe("Audience validation", () => {
     const response = fetch('https://raw.githubusercontent.com/SymplifyConversion/sst-sdk-nodejs/main/test/sdk_config.json');
     const testData = JSON.parse(response.json());
 
-    for (const s of testData) {
-        if (s.skip) {
-            console.log(`skipping test '${s.suite_name}' (because ${s.skip})`);
-            continue;
-        }
-
-        describe(s.suite_name, () => {
-            for (const i in s.test_cases) {
-                const t = s.test_cases[i];
-                const desc = `expression JSON '${t.audience_string}' should error with '${t.expect_error}'`;
-                test(desc, () => {
-                    expect(() => new Audience(t.audience_string)).toThrow(t.expect_error);
-                });
-            }
-        });
-    }
+    // Insert Test code here
 });
 ```
 ## 
