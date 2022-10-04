@@ -232,6 +232,7 @@
     "cookies": {
       "sg_cookies": "{%2210001%22:{%22visid%22:%22foobar%22%2C%22pmr%22:1005%2C%22pmv%22:10051}%2C%22_g%22:1}"
     },
+    "expect_variation_match": "Original",
     "expect_extra_cookies": {
       "sg_audience_trace": "[{\"call\":\"equals\",\"result\":true},[{\"call\":\"string-attribute\",\"result\":\"bar\"},\"foo\"],\"bar\"]"
     }
